@@ -27,9 +27,10 @@ public class Main {
 
 Output:
 Pet
+
 Cat
 
-# Call parent class methods
+# 2. Call parent class methods
 
 class Animal {
 
@@ -57,10 +58,11 @@ public class Main {
 
 Output:
 Animal makes sound
+
 Meow
 
 
-# Call Parent Class Constructor
+# 3. Call Parent Class Constructor
 
 class Animal {
 
@@ -89,4 +91,5 @@ public class Main {
 
 Output:
 Animal constructor
+
 Cat constructor
