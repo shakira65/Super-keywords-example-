@@ -26,6 +26,7 @@ public class Main {
 }
 
 Output:
+
 Pet
 
 Cat
@@ -57,6 +58,7 @@ public class Main {
 }
 
 Output:
+
 Animal makes sound
 
 Meow
@@ -90,6 +92,62 @@ public class Main {
 }
 
 Output:
+
 Animal constructor
 
 Cat constructor
+
+# 4. combined 
+
+class Pet {
+
+    String type = "Pet";    
+
+    Pet() {             
+        System.out.println("Pet parent class constructor");    }
+
+    void sound() {          
+        System.out.println("Animal makes sound");    }
+}
+
+class Cat extends Pet {
+
+    String type = "Cat";    
+
+    Cat() {                
+        super();            
+        System.out.println("Cat child class constructor");    }
+
+    void printInfo() {
+        System.out.println("Parent type: " + super.type);   
+        System.out.println("Child type: " + this.type);    }
+
+      void sound() {
+        super.sound();      
+        System.out.println("Meow");     }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Cat c = new Cat();
+        System.out.println();
+        c.printInfo();
+        System.out.println();
+        c.sound();
+    }
+}
+
+Output:
+
+Pet parent class constructor
+
+Cat child class constructor
+
+Parent type: Pet
+
+Child type: Cat
+
+Animal makes sound
+
+Meow
